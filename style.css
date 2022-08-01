@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --range: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-section {
+  width: 40%;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.top-section h1 {
+  color: var(--very-dark-blue);
+  font-size: 38px;
+  font-weight: 200;
+  margin-bottom: -10px;
+}
+
+.top-section h2 {
+  color: var(--very-dark-blue);
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.top-section p {
+  color: var(--grayish-blue);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 375px;
+  height: 250px;
+  position: relative;
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  color: var(--very-dark-blue);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--grayish-blue);
+  font-size: 14px;
+}
+
+.card img {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.two-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card.supervisor {
+  border-top: 5px solid var(--cyan);
+}
+
+.card.team-builder {
+  border-top: 5px solid var(--red);
+}
+
+.card.karma {
+  border-top: 5px solid var(--range);
+}
+
+.card.calculator {
+  border-top: 5px solid var(--blue);
+}
+
+@media (max-width: 1200px) {
+  .top-section {
+    width: 90%;
+    margin-bottom: 60px;
+  }
+
+  .top-section h1 {
+    margin-bottom: -5px;
+  }
+
+  .top-section h1,
+  .top-section h2 {
+    font-size: 26px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
